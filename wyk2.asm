@@ -31,9 +31,9 @@ start1:
 p1:		push 	cx 						; chronimy cx zostawiąjąc go na stosie, a po programie go odbieramy...
 		mov 	al, byte ptr ds:[si]	; pobieramy kolejne znaki argumentów, si na początku 082h
 		mov 	byte ptr es:[di], al
-		inc 	si
+		inc 	sitd 
 		inc 	di
-		pop		cx						; ...należy się tylko upewnić czy stos nie zostai jakiś śmieci
+		pop		cx						; ...należy się tylko upewnić czy stos nie zostawi jakiś śmieci
 		loop 	p1						; cx = cx-1; czy cx == 0? jeśli nie: skacze do p1; jeśli 0, idzie dalej
 		mov 	byte ptr es:[di], '$'	; dopisanie na końcu $
 

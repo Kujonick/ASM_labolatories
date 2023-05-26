@@ -69,7 +69,7 @@
 ; CX - rejestr powtórzenń
 
 ;1) pojedyncze operacje
-;	 - MOVSB / MOVSW
+	 - MOVSB / MOVSW
 		przepisanie pamęci elementu bloku danych [DS:SI] -> [ES:DI]
 		
 		lds 	si, dword ptr ds:[ZRODLO]
